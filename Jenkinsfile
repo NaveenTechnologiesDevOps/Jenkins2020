@@ -1,4 +1,4 @@
-node
+node('node-1')
 {
     properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), pipelineTriggers([pollSCM('* * * * *')])])
     def mavenHome = tool name: "maven3.6.2"
@@ -11,6 +11,7 @@ node
     {
         sh "${mavenHome}/bin/mvn clean package"
     }
+    /*
     stage('SonarQubeReportExecution')
     {
         sh "${mavenHome}/bin/mvn sonar:sonar"
@@ -33,4 +34,5 @@ node
         With Regards,
         Naveen''', cc: 'naveenleo91@gmail.com', from: '', replyTo: '', subject: 'Build Status', to: 'naveenleo91@gmail.com'
     }
+    */
 }
