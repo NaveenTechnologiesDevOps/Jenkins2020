@@ -24,7 +24,7 @@ node('master')
     {
         sshagent(['8cb67a29-bc77-44d8-90cd-8b29acbe9859']) 
         {
-            sh "scp -o StrictHostKeyChecking=no target/*.war ec2-user@13.232.149.230:/opt/apache-tomcat-9.0.43/webapps/"
+            sh "scp -o StrictHostKeyChecking=no target/*.war ec2-user@13.233.6.37:/opt/apache-tomcat-9.0.43/webapps/"
         }
     }
     stage('EmailNaotification')
