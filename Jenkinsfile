@@ -11,7 +11,7 @@ node('master')
     {
         sh "${mavenHome}/bin/mvn clean package"
     }
-    /*
+  
     stage('SonarQubeReportExecution')
     {
         sh "${mavenHome}/bin/mvn sonar:sonar"
@@ -33,5 +33,5 @@ node('master')
 
         With Regards,
         Naveen''', cc: 'naveenleo91@gmail.com', from: '', replyTo: '', subject: 'Build Status', to: 'naveenleo91@gmail.com'
-    } */
+    } 
 }
